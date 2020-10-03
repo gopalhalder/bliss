@@ -1,0 +1,75 @@
+.about {
+  &__img {
+    //grid-column: 1 / 5;
+    grid-column: 5 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    &--bg {
+      grid-column: 3 / -1;
+      grid-row: 1 / -1;
+      background: linear-gradient(
+          200deg,
+          rgba($color-secondary, 1),
+          rgba($color-secondary, 0.8),
+          transparent
+        ),
+        url(../img/city-hotel.jpg) center no-repeat;
+      background-size: cover;
+    }
+
+    &--main {
+      grid-column: 1 / 5;
+      grid-row: 2 / 6;
+
+      display: grid;
+      align-items: center;
+    }
+  }
+
+  &__pic {
+    width: 120%;
+    transform: scaleY(1.2);
+  }
+
+  &__content {
+    //grid-column: 5 / -1;
+    grid-column: 1 / 5;
+    grid-row: 1 / 1;
+
+    padding: 8rem 0;
+
+    display: grid;
+    grid-template-columns: [center-start] minmax(min-content, 1fr) [center-end] 10rem;
+    align-content: center;
+  }
+
+  &__heading {
+    grid-column: center-start / center-end;
+  }
+
+  &__description {
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-column-gap: 6.5rem;
+    align-items: start;
+  }
+
+  &__detail {
+    padding-right: 2.5rem;
+  }
+
+  &__icon {
+    height: 6rem;
+    width: 6rem;
+    fill: #4f2d7f;
+    margin-bottom: 1.5rem;
+  }
+
+  &__button {
+    grid-column: center-start / center-end;
+  }
+}

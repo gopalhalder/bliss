@@ -1,0 +1,125 @@
+.footer {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(6, minmax(min-content, 20rem)) minmax(
+      6rem,
+      1fr
+    );
+  grid-column-gap: 3.5rem;
+  padding: 6rem 0;
+
+  &__box-widget {
+    grid-column: 3 / 7;
+    grid-row: 1 / 2;
+
+    transform: translateY(-8.25rem);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-column-gap: 3.5rem;
+    grid-row-gap: 3rem;
+
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__widget {
+    background-color: #fff;
+    box-shadow: -1px -1px 3px 0 rgba(0, 0, 0, 0.15),
+      1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1.2rem;
+    padding: 1.2rem 1.8rem;
+
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-column-gap: 2.8rem;
+
+    &--1 {
+    }
+    &--2 {
+    }
+    &--3 {
+    }
+
+    &--svg {
+      height: 4rem;
+      width: 4rem;
+      fill: #000;
+    }
+
+    &--text {
+      align-self: center;
+    }
+
+    &--heading {
+      font-size: 2rem;
+      color: #000;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+  }
+
+  &__logo-container {
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+  }
+
+  &__logo {
+    width: 16.5rem;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: $font-secondary;
+    margin: 3.7rem 5rem 0 0;
+  }
+
+  &__menu-box {
+    &--1 {
+      grid-row: 2 / 3;
+      grid-column: 4 / 5;
+    }
+    &--2 {
+      grid-row: 2 / 3;
+      grid-column: 5 / 6;
+    }
+    &--3 {
+      grid-row: 2 / 3;
+      grid-column: 6 / 7;
+    }
+    &--4 {
+      grid-row: 2 / 3;
+      grid-column: 7 / 8;
+    }
+  }
+
+  &__menu-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+  }
+
+  &__links-box {
+    display: inline-grid;
+  }
+
+  &__link:link,
+  &__link:visited {
+    line-height: 1.88;
+    text-decoration: none;
+    color: #ffffffa6;
+    text-transform: capitalize;
+    font-family: $font-secondary;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:active {
+      color: #fff;
+    }
+  }
+}

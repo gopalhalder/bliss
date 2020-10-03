@@ -1,0 +1,100 @@
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-secondary;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+//HEADING
+%heading {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #415161;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 3.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heading-tertiary {
+  @extend %heading;
+  color: #88741b;
+  font-size: 1.8rem;
+}
+
+.heading-2 {
+  @extend %heading;
+
+  font-size: 3.625rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heading-secondary-big {
+  @extend %heading;
+  font-family: $font-tertiary;
+  font-size: 4.2rem;
+  letter-spacing: 1px;
+  line-height: 1.15;
+  //word-spacing: 2px;
+  font-weight: 500;
+  color: #415161;
+
+  &--light {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 3rem;
+  font-family: $font-secondary;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.16);
+  line-height: normal;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.heading-3-big {
+  @extend %heading;
+  font-size: 4rem;
+  text-align: center;
+  line-height: normal;
+  font-weight: 200;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 2.85rem;
+  &--light {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+  }
+}
+
+.heading-5 {
+  @extend %heading;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.865rem;
+}
+
+.heading-6 {
+  @extend %heading;
+  color: $color-grey-light-1;
+  text-shadow: 0 2px 20px rgba(65, 38, 38, 0.16);
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.paragraph {
+  font-size: 1.8rem;
+  line-height: 2.265833rem;
+  font-family: $font-primary;
+}

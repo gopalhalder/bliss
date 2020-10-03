@@ -1,0 +1,146 @@
+.hotel {
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  display: grid;
+  grid-row-gap: 0.8rem;
+  padding-bottom: 2.8rem;
+
+  // HOTEL TOP PART INC: IMG, RIBBON, & NAME
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__picture {
+    grid-column: 1 / -1;
+    grid-row: 1/ -1;
+  }
+
+  &__img {
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+  }
+
+  &__ribbon {
+    height: 5.1rem;
+    width: 5.1rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10rem;
+    border: 1px solid #4f2d7f;
+    background-color: #4f2d7f;
+
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    justify-self: right;
+
+    transform: translate(20%, -20%);
+    box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.12),
+      0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+
+  &__ribbon-text {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 500;
+  }
+
+  &__name {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    justify-self: center;
+    align-self: end;
+
+    width: 100%;
+    background-color: rgba($color-secondary, 0.9);
+    padding: 0.7rem 0;
+
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__top:hover &__name {
+    opacity: 1;
+  }
+
+  &__caption {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+
+  // HOTEL BOTTOM PART
+  &__bottom {
+    display: grid;
+    grid-row-gap: 0.85rem;
+  }
+
+  &__title {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__title-name {
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 0.722rem;
+
+    font-family: $font-primary;
+    font-weight: 500;
+    &--sub {
+      color: #808285;
+      font-size: 1.445rem;
+      text-transform: capitalize;
+    }
+
+    &--main {
+      font-size: 1.7rem;
+      color: $color-secondary;
+      text-align: center;
+      line-height: 1.15;
+      padding: 0 2.04rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__rating {
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+  }
+
+  &__svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: #f2295b;
+  }
+
+  &__price {
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-column-gap: 3px;
+
+    font-size: 1.9rem;
+    font-weight: 500;
+    &--del {
+      color: #808285;
+      margin-right: 3px;
+    }
+
+    &--main {
+      color: $color-secondary;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}

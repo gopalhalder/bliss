@@ -1,0 +1,40 @@
+.section-features {
+  grid-column: full-start / full-end;
+}
+
+.section-about {
+  grid-column: center-start / full-end;
+  //grid-column: full-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.section-discount {
+  background-color: #f6f6f7;
+  grid-column: full-start / full-end;
+  margin: 0 5rem;
+}
+
+.section-hotel {
+  background-color: #fff;
+  grid-column: center-start / center-end;
+  padding: 10rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 4rem;
+}
+
+.section-gallery {
+  background-color: #fff;
+  padding: 0 2.5rem 10rem 2.5rem;
+  grid-column: full-start / full-end;
+}
+
+.footer {
+  background-image: linear-gradient(0deg, #272c41 0%, #101d2c 100%);
+  grid-column: full-start / full-end;
+}
+//linear-gradient(0deg, #272c41 0%, #051148 100%);

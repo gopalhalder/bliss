@@ -1,0 +1,118 @@
+.feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr;
+
+  & > * {
+    padding: 2.5rem 0;
+  }
+
+  // ABOUT OR FIRST COLUMN
+  &__about {
+    background: linear-gradient(
+        100deg,
+        rgba($color-secondary, 1),
+        rgba($color-secondary, 0.8),
+        transparent
+      ),
+      url(../img/about.jpg) center no-repeat;
+    background-size: cover;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    & > * {
+      display: grid;
+      justify-content: center;
+    }
+
+    &--text {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+
+  // DETAIL OR SECOND COLUMN
+  &__detail {
+    background-image: linear-gradient(to bottom right, #20123a, #462c51);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-row-gap: 6rem;
+  }
+
+  &__detail-text {
+    display: grid;
+    justify-items: center;
+    color: #fff;
+
+    &--count {
+      letter-spacing: 1px;
+      font-size: 2.9rem;
+      font-weight: 200;
+      color: #f48a8a;
+    }
+  }
+
+  // TESTIMONIALS
+  &__testimonial {
+    background-color: #fff;
+
+    display: grid;
+    grid-template-columns:
+      [full-start]
+      minmax(2rem, 3rem) [col-center-start] repeat(
+        3,
+        [col-start] minmax(min-content, 1fr) [col-end]
+      )
+      [col-center-end]
+      minmax(2rem, 3rem) [full-end];
+
+    grid-template-rows: min-content minmax(min-content, 1fr) 7rem;
+  }
+
+  &__testimonial-paragraph {
+    grid-column: col-center-start / col-center-end;
+    grid-row: 1 / 2;
+
+    font-size: 3.85rem;
+    color: #000;
+    line-height: 1.35;
+    text-transform: capitalize;
+  }
+
+  &__testimonial-author {
+    grid-column: col-center-start / col-center-end;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: 25rem max-content;
+    grid-template-rows: 8rem;
+
+    align-items: center;
+    &--wrap {
+      border-top: 1px dotted #000;
+    }
+
+    &--text {
+      //color: #4f4f4f;
+      font-size: 1.825rem;
+      margin-left: 1rem;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__testimonial-entities {
+    grid-column: col-start 3 / col-center-end;
+    grid-row: 3 / -1;
+
+    display: grid;
+    justify-content: end;
+    transform: translateY(-3.2rem);
+  }
+
+  &__icon {
+    fill: rgba($color-grey-light-2, 0.65); //rgba(#462c51, 0.69);
+    height: 14.5rem;
+    width: 14.5rem;
+  }
+}
