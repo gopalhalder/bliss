@@ -13,7 +13,7 @@ html {
 
 .body-container {
   display: grid;
-  grid-template-rows: 100vh repeat(6, min-content);
+  grid-template-rows: 100vh repeat(7, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       8,
