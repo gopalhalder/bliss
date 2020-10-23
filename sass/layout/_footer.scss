@@ -62,10 +62,13 @@
   &__logo-container {
     grid-row: 2 / 3;
     grid-column: 2 / 4;
+
+    margin-top: auto;
   }
 
   &__logo {
-    width: 16.5rem;
+    height: 6.5rem;
+    cursor: pointer;
   }
 
   &__text {
@@ -158,8 +161,7 @@
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: #4f2d7f;
-        border-color: #4f2d7f;
+        border-color: #54595f;
       }
     }
   }
